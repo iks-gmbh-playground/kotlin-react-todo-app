@@ -1,6 +1,5 @@
 import org.w3c.dom.HTMLInputElement
-import react.FC
-import react.Props
+import react.*
 import react.dom.html.InputType
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.div
@@ -9,12 +8,8 @@ import react.dom.html.ReactHTML.input
 import react.dom.html.ReactHTML.li
 import react.dom.html.ReactHTML.span
 import react.dom.html.ReactHTML.ul
-import react.useRef
-import react.useState
 
 data class Todo(val id: Int, val text: String, var isDone: Boolean)
-
-
 
 val TodoApp = FC<Props> {
 
@@ -38,12 +33,10 @@ val TodoApp = FC<Props> {
     }
 
     div {
-
         h3 {
             +"Todos"
         }
-
-        li {
+        ul {
             for (todo in todos) {
                 li {
                     input {

@@ -1,4 +1,4 @@
-package enhanced
+package step9
 
 import react.FC
 import react.Props
@@ -12,8 +12,8 @@ import react.dom.html.ReactHTML.ul
 
 external interface TodoListProps : Props {
     var title: String
-    var todos: List<TodoElement>
-    var onChangeFunction: (TodoElement) -> Unit
+    var todos: List<Todo>
+    var onChange: (Todo) -> Unit
 }
 
 val TodoList = FC<TodoListProps> { props ->
@@ -28,7 +28,7 @@ val TodoList = FC<TodoListProps> { props ->
                         type = InputType.checkbox
                         checked = todo.isDone
                         onChange = {
-                            props.onChangeFunction(todo)
+                            props.onChange(todo)
                         }
                     }
                     span {

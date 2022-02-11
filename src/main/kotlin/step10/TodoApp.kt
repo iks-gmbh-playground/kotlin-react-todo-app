@@ -1,7 +1,12 @@
 package step10
 
+import csstype.Margin
+import csstype.NamedColor
+import csstype.Padding
+import csstype.em
 import org.w3c.dom.HTMLInputElement
 import react.*
+import react.css.css
 import react.dom.html.InputType
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.div
@@ -57,6 +62,13 @@ val TodoApp = FC<Props> {
 
 
     div {
+        css {
+            backgroundColor = NamedColor.lightgray
+            padding = Padding(vertical = 0.7.em, horizontal = 2.em)
+            margin = Margin("0")
+//            width = 100.vw
+//            height = 100.vh
+        }
 
         TodoList {
             this.title = "My Todos"
@@ -70,6 +82,9 @@ val TodoApp = FC<Props> {
             type = InputType.text
             ref = inputField
             placeholder = "Todo Item"
+            onKeyDown = {
+                if (it.key == "Enter") addTodo()
+            }
         }
         button {
             onClick = { addTodo() }

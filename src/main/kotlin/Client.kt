@@ -37,7 +37,7 @@ import react.dom.render
  *
  * 6. Ich werde über gradle und Webpack gebaut und werde in Javascript transpiliert. Aber das Thema ein ander mal :)
  *
- * Und warum das Ganze? Ich bin eine React-App.
+ * Und warum das Ganze? Ich bin auch eine React-App.
  *
  * Ich besitze also alles, was man für eine moderne Browseranwendung braucht:
  * Ein Lifecycle-Management, Bindings und noch viele andere Features. Aber diese kommen später im Detail!

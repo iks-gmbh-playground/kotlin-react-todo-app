@@ -1,14 +1,11 @@
 package step10
 
 import org.w3c.dom.HTMLInputElement
-import react.FC
-import react.Props
+import react.*
 import react.dom.html.InputType
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.input
-import react.useRef
-import react.useState
 
 
 data class Todo(val id: Int, val text: String, var isDone: Boolean = false)
@@ -20,6 +17,26 @@ val TodoApp = FC<Props> {
 
     var todos by useState (listOf<Todo>())
     val inputField = useRef<HTMLInputElement>()
+
+    /**
+     * Gratistip!
+     *
+     * Ein weiterer Hook, der häufig verwendet wird, ist der useEffect Hook. Die dort definierte Methode wird ausgeführt,
+     * wenn Änderungen auftreten. Dies ist hier mal Beispielsweise eingebaut.
+     */
+
+    useEffect(todos) {
+        console.log("Todos haben sich geändert")
+    }
+    useEffect {
+        console.log("Und zack, da wurde ich neu gerendert")
+        cleanup {
+            console.log("Mach's gut, ich werde jetzt neu gerendert")
+        }
+    }
+    useEffectOnce {
+        console.log("Hello World. Ich wurde initial geladen.")
+    }
 
     fun addTodo() {
         inputField.current?.let { currentInput ->

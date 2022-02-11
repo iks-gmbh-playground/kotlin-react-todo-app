@@ -48,7 +48,7 @@ fun main() {
         render(
             // Anweisung an React, unsere Komponente (element) auf den Container (in userem Fall ein div mit der Id 'root')
             // zu rendern und den Lifecycle zu starten.
-            element = step10.TodoApp.create(),
+            element = step1.TodoApp.create(),
             container = document.getElementById("root")!!
         )
     }

@@ -24,7 +24,9 @@ val TodoApp = FC<Props> {
      * Ein weiterer Hook, der häufig verwendet wird, ist der useEffect Hook. Die dort definierte Methode wird ausgeführt,
      * wenn Änderungen auftreten. Dies ist hier mal Beispielsweise eingebaut.
      */
-
+    useEffectOnce {
+        console.log("Hello World. Ich wurde initial geladen.")
+    }
     useEffect(todos) {
         console.log("Todos haben sich geändert")
     }
@@ -33,9 +35,6 @@ val TodoApp = FC<Props> {
         cleanup {
             console.log("Mach's gut, ich werde jetzt neu gerendert")
         }
-    }
-    useEffectOnce {
-        console.log("Hello World. Ich wurde initial geladen.")
     }
 
     fun addTodo() {

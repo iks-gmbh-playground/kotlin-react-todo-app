@@ -21,7 +21,7 @@ data class Todo(val id: Int, val text: String, var isDone: Boolean = false)
  * Herzlichen Glückwunsch. Wir haben neue Todos in unserer Liste! :)
  * Nun wollen wir aus unserer TodoListe eine eigene Komponente erstellen.
  *
- * Wie bereits angedeutet, können Componenten Props haben. Unserer neuen Liste werden wir auch ein paar
+ * Wie bereits angedeutet, können Komponenten Props haben. Unserer neuen Liste werden wir auch ein paar
  * Props mitgeben wollen. Wir wollen den Titel, die Todos-Liste und den Change-Handler von aussen vorgeben, den
  * wir wollen das StateManagement an der App zentral behalten (hier).
  *

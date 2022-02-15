@@ -19,7 +19,7 @@ data class Todo(val id: Int, val text: String, var isDone: Boolean = false)
 /**
  * Herzlichen Glückwunsch. Wir haben neue Todos in unserer Liste! :)
  *
- * Als nächstes wollen wir uns darum kümmern, dass wir ein checkbox an unseren Todos in der Liste haben.
+ * Als Nächstes wollen wir uns darum kümmern, dass wir ein checkbox an unseren Todos in der Liste haben.
  */
 val TodoApp = FC<Props> {
 
@@ -44,7 +44,6 @@ val TodoApp = FC<Props> {
 
     }
 
-
     div {
         h3 {
             +"Todos"
@@ -57,8 +56,6 @@ val TodoApp = FC<Props> {
                      * Refactor me :)
                      * Lege bei der Checkbox schonmal nen leeren onChange-Handler an ;) den brauchen wir gleich.
                      */
-
-
                     +todo.text
                 }
             }
@@ -73,7 +70,6 @@ val TodoApp = FC<Props> {
             onClick = { addTodo() }
             +"Add Todo"
         }
-
     }
     // Denke daran, diese App im Client zu rendern ;)
 }

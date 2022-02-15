@@ -24,7 +24,7 @@ val TodoApp = FC<Props> {
     val inputField = useRef<HTMLInputElement>()
 
     /**
-     * Gratistip!
+     * Gratis Tipp!
      *
      * Ein weiterer Hook, der häufig verwendet wird, ist der useEffect Hook. Die dort definierte Methode wird ausgeführt,
      * wenn Änderungen auftreten. Dies ist hier mal Beispielsweise eingebaut.
@@ -75,7 +75,7 @@ val TodoApp = FC<Props> {
             this.todos = todos.filter { it.isDone.not() }
             this.onChange = {
                 it.isDone = true
-                todos = todos.toMutableList() // <- Ugly, aber React weiss dadurch bescheid! -> delegated property setter :)
+                todos = todos.toMutableList() // <- Ugly, aber React weiss dadurch bescheid! -> Delegated-Property-Setter :)
             }
         }
         input {
@@ -95,7 +95,7 @@ val TodoApp = FC<Props> {
             this.todos = todos.filter { it.isDone }
             this.onChange = {
                 it.isDone = false
-                todos = todos.toMutableList() // <- Ugly, aber React weiss dadurch bescheid! -> delegated property setter :)
+                todos = todos.toMutableList() // <- Ugly, aber React weiss dadurch bescheid! -> Delegated-Property-Setter :)
             }
         }
     }

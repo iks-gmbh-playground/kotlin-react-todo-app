@@ -16,7 +16,7 @@ import react.useRef
 data class Todo(val id: Int, val text: String, var isDone: Boolean)
 
 /**
- * Wir haben nun unseren addTodo Handler. Jetzt wollen wir ihn mit Leben füllen. ;)
+ * Wir haben nun unseren addTodo-Handler. Jetzt wollen wir ihn mit Leben füllen. ;)
  * Hier kommt ein wenig Kotlin zum Einsatz.
  */
 val TodoApp = FC<Props> {

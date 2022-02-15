@@ -18,18 +18,17 @@ data class Todo(val id: Int, val text: String, var isDone: Boolean = false)
 /**
  * Leider sehen wir immer noch nichts. Warum ist das so?
  *
- *
- * Richtig. Die Liste hat sich zwar verändert, aber React hat davon nichts mitbekommen und rendert den Dom entsprechend nicht neu.
- * Abhilfe verschafft der State. Wir können hier nun einen zweiten Hook kennen lernen. useState()
- * Wir müssen nun unsere Liste mit den Todos etwas anpassen
+ * Richtig. Die Liste hat sich zwar verändert, aber React hat davon nichts mitbekommen und rendert den Dom entsprechend
+ * nicht neu. Abhilfe verschafft der State. Wir können hier nun einen zweiten Hook kennenlernen. useState().
+ * Nun müssen wir unsere Liste mit den Todos etwas anpassen.
  */
 val TodoApp = FC<Props> {
     /*
      * Hier kommt nun wieder ein Kotlin-Feature zum Einsatz: Delegated Properties.
      * Indem wir nicht todos = useState() sondern todos by useState() verwenden, geben wir die Initialisierung des Objekts,
-     * aus unseren Händen. Darüber hinaus wird nun jedes mal, wenn wir eine neuzuweisung machen wie z.B. todos = neueTodos nicht einfach nur die
-     * Property neugesetzt, sondern geht durch einen Setter, der von React zur Verfügung gestellt wird und welcher sich out-of-the-box darum kümmert,
-     * dass ein rerendering geschieht.
+     * aus unseren Händen. Darüber hinaus wird nun jedes mal, wenn wir eine neuzuweisung machen wie z.B. todos =
+     * neueTodos nicht einfach nur die Property neu gesetzt, sondern geht durch einen Setter, der von React zur
+     * Verfügung gestellt wird und welcher sich out-of-the-box darum kümmert, dass ein re-rendering geschieht.
      * Im original Javascript würde man an dieser Stelle folgendes sehen
      * const [count, setCount] = useState(0);
      * Da finde ich den Ansatz schöner, den Setter im delegated Property zu "verstecken" ;)
